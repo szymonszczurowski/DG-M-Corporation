@@ -33,8 +33,31 @@ h1.company-name {
 	width: 100%;
 }
 
-.sticky-body{
-    overflow: hidden;
+.sticky-body {
+	overflow: hidden;
+}
+
+.section-title {
+	position: relative;
+	margin: 0 auto 2em;
+	width: fit-content;
+	font-size: 3.2rem;
+	font-weight: 300;
+	color: $gold;
+
+	span {
+		font-weight: 700;
+	}
+
+	&::before {
+		position: absolute;
+		content: '';
+		bottom: -.1em;
+		left: 0;
+		height: 2px;
+		background-color: $gold;
+		width: 20%;
+	}
 }
 
 // header
@@ -132,10 +155,10 @@ h1.company-name {
 		transform: translateX(-102%);
 		transition: transform 0.3s;
 		z-index: 10;
-        
-        &--active {
-            transform: translateX(0);
-        }
+
+		&--active {
+			transform: translateX(0);
+		}
 	}
 
 	&-desktop {
@@ -156,7 +179,108 @@ h1.company-name {
 		&:hover {
 			color: $gold;
 		}
+	}
+}
 
+//cards
+.cards {
+	background-color: $darker;
+	overflow: hidden;
+
+	&__box {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 30px;
+		padding: 6em 2em;
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
+		padding: 3em;
+		background-color: $dark;
+		border-radius: 8px;
+		border: 1px solid transparent;
+		transition: border 0.3s, background-color 0.3s;
+		z-index: 5;
+
+		&:hover {
+			background-color: $darker;
+			border: 1px solid $gold;
+			z-index: 1;
+		}
+
+		&::before {
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: 100%;
+			border: 1px solid $gold;
+			border-radius: 8px;
+			opacity: 0;
+		}
+		&:hover::before {
+			animation: pulse 1s;
+			z-index: 1;
+		}
+
+		&-img {
+			width: 60px;
+			margin-bottom: 1em;
+		}
+
+		&-title {
+			margin-bottom: 0.6em;
+			text-transform: uppercase;
+		}
+	}
+}
+
+//INFO
+
+.info {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr;
+	padding: 6em 2em;
+
+	&__box {
+		&-img {
+			width: 100%;
+			object-fit: cover;
+			filter: sepia();
+		}
+
+		&-title {
+			margin: 0.5em 0;
+			font-weight: 300;
+			font-size: 2.6rem;
+			color: $gold;
+		}
+		&-text {
+			margin-bottom: 0.5em;
+		}
+		&-link {
+			display: block;
+			margin-bottom: 2em;
+			text-align: right;
+			text-decoration: none;
+			color: $gold;
+			font-weight: 700;
+			transition: color 0.3s;
+
+			&:hover {
+				color: $darkgold;
+			}
+		}
+	}
+
+	&__bg-icon{
+		display: none;
 	}
 }
 
