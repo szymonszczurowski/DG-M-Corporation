@@ -400,7 +400,8 @@ h1.company-name {
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
 		button {
-			padding: 1em 0;
+			padding: 1em;
+			min-width: 120px;
 			background: none;
 			color: $gold;
 			font-weight: bold;
@@ -426,6 +427,8 @@ h1.company-name {
 		}
 		input,
 		textarea {
+			padding: 1em;
+			width: 100%;
 			background: none;
 			border: 1px solid rgba(255, 255, 255, 0.1);
 			color: white;
@@ -436,22 +439,20 @@ h1.company-name {
 			}
 		}
 
-		input {
-			padding: 1em;
-		}
+
 		textarea {
 			width: 100%;
 			max-width: 100%;
 			min-width: 100%;
 		}
 
-		&:nth-child(1){
+		&:nth-child(1) {
 			grid-column: 1/-1;
 		}
-		&:nth-child(2){
+		&:nth-child(2) {
 			grid-column: 1/-1;
 		}
-		&:nth-child(3){
+		&:nth-child(3) {
 			grid-column: 1/-1;
 		}
 	}

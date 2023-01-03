@@ -398,7 +398,8 @@ h1.company-name {
   grid-template-columns: repeat(6, 1fr);
 }
 .contact__form button {
-  padding: 1em 0;
+  padding: 1em;
+  min-width: 120px;
   background: none;
   color: #d6c78e;
   font-weight: bold;
@@ -421,6 +422,8 @@ h1.company-name {
 }
 .contact__box input,
 .contact__box textarea {
+  padding: 1em;
+  width: 100%;
   background: none;
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: white;
@@ -429,9 +432,6 @@ h1.company-name {
 .contact__box textarea:focus {
   outline: none;
   border: 1px solid #d6c78e;
-}
-.contact__box input {
-  padding: 1em;
 }
 .contact__box textarea {
   width: 100%;
@@ -542,8 +542,6 @@ h1.company-name {
     display: block;
   }
   .contact__form {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
     gap: 30px;
   }
   .contact__form button {
