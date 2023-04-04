@@ -1,1 +1,1 @@
-[hej](https://szymonszczurowski.github.io/DG-M-Corporation/)
+[Link to website](https://szymonszczurowski.github.io/DG-M-Corporation/)
